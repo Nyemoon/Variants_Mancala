@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;900&family=Almendra:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
 :root {
   --color-cream: #fcfaf2; /* Um creme suave e sofisticado */
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --color-terracotta: rgba(179, 90, 56, 0.8);
   --color-navy-dark: #0b1220;
+  --font-title: 'Cinzel', serif;
+  --font-subtitle: 'Almendra', serif;
 }
 
 * {
@@ -21,8 +26,6 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
-  /* Sua lógica de fundo mantida e refinada */
   background: 
     radial-gradient(circle at top left, rgba(179, 90, 56, 0.15), transparent 25%),
     radial-gradient(circle at bottom right, rgba(26, 43, 76, 0.95), transparent 30%),
@@ -36,11 +39,10 @@ html, body {
   background-attachment: fixed;
   
   color: var(--color-cream);
-  font-family: var(--font-sans);
+  font-family: var(--font-almendra);
   padding: 20px;
 }
 
-/* Container Principal do Menu */
 .menu-container {
   width: min(100%, 760px);
   padding: 48px 32px;
@@ -71,8 +73,6 @@ html, body {
   text-transform: uppercase;
   margin-top: -10px;
 }
-
-/* Grid de Opções de Variantes */
 .menu-options {
   display: flex;
   gap: 20px;
@@ -82,7 +82,7 @@ html, body {
 }
 
 .menu-button {
-  all: unset; /* Reseta o estilo padrão do botão */
+  all: unset;
   flex: 1;
   min-width: 200px;
   padding: 24px;

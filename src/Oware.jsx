@@ -99,7 +99,6 @@ const OwareGame = () => {
     nextBoard[index] = 0;
     let currentIndex = index;
 
-    // LÓGICA DO OWARE: Pula AMBOS os Mancalas durante a semeadura
     while (stones > 0) {
       currentIndex = (currentIndex + 1) % 14;
       if (currentIndex === 6 || currentIndex === 13) continue;
@@ -135,7 +134,7 @@ const OwareGame = () => {
       moveMessage += captureMessage;
     }
 
-    // LÓGICA DO OWARE: Nunca há turno extra. O turno sempre passa.
+    
     const nextPlayer = opponentPlayer;
     moveMessage += ` Próximo jogador: ${playerNames[`player${nextPlayer}`]}.`;
 
@@ -209,13 +208,13 @@ const OwareGame = () => {
             <h2>Bem-vindo ao Oware</h2>
             <div className="input-group">
               <label htmlFor="player1">Seu nome</label>
-              <input id="player1" type="text" value={playerInputs.player1} onChange={(e) => handleInputChange('player1', e.target.value)} />
+              <input id="player1" placeholder="Jogador 1" type="text" value={playerInputs.player1} onChange={(e) => handleInputChange('player1', e.target.value)} />
             </div>
             <div className="input-group">
               <label htmlFor="player2">Adversário</label>
-              <input id="player2" type="text" value={playerInputs.player2} onChange={(e) => handleInputChange('player2', e.target.value)} />
+              <input id="player2" placeholder="Jogador 2" type="text" value={playerInputs.player2} onChange={(e) => handleInputChange('player2', e.target.value)} />
             </div>
-            <button className="start-button" onClick={startGame}>Iniciar Oware</button>
+            <button className="start-button" onClick={startGame}>Começar partida</button>
           </div>
         </div>
       ) : (
